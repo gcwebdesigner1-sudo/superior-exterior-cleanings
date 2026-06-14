@@ -156,11 +156,11 @@
     #gallery { background: var(--light); padding: 88px 48px; }
     .ba-slider-wrap { max-width: 820px; margin: 0 auto 44px; }
     .ba-slider-label { text-align: center; font-size: 0.68rem; letter-spacing: 3px; font-weight: 900; color: #888; text-transform: uppercase; margin-bottom: 14px; }
-    .ba-wrap { position: relative; width: 100%; height: 340px; overflow: hidden; border-radius: 6px; cursor: ew-resize; user-select: none; -webkit-user-select: none; box-shadow: 0 4px 24px rgba(0,0,0,0.15); }
-    .ba-after { position: absolute; inset: 0; background-repeat: no-repeat; }
-    .ba-before-clip { position: absolute; top: 0; left: 0; bottom: 0; width: 50%; overflow: hidden; }
-    .ba-before-inner { position: absolute; top: 0; left: 0; width: 200%; height: 100%; background-repeat: no-repeat; }
-    .ba-divider { position: absolute; top: 0; bottom: 0; left: 50%; width: 3px; background: #fff; transform: translateX(-50%); pointer-events: none; }
+    .ba-wrap { position: relative; width: 100%; aspect-ratio: 4 / 3; overflow: hidden; border-radius: 6px; cursor: ew-resize; user-select: none; -webkit-user-select: none; box-shadow: 0 4px 24px rgba(0,0,0,0.15); background: #111; }
+    .ba-after, .ba-before { position: absolute; inset: 0; background-repeat: no-repeat; background-size: 200% auto; }
+    .ba-after { background-position: right center; z-index: 1; }
+    .ba-before { background-position: left center; z-index: 2; clip-path: inset(0 50% 0 0); }
+    .ba-divider { position: absolute; top: 0; bottom: 0; left: 50%; width: 3px; background: #fff; transform: translateX(-50%); pointer-events: none; z-index: 3; }
     .ba-knob { position: absolute; top: 50%; left: 50%; transform: translate(-50%,-50%); width: 44px; height: 44px; background: #fff; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 2px 10px rgba(0,0,0,0.35); font-size: 0.65rem; color: var(--blue); font-weight: 900; }
     .ba-tag { position: absolute; bottom: 14px; font-size: 0.65rem; font-weight: 900; letter-spacing: 2px; padding: 5px 12px; border-radius: 2px; text-transform: uppercase; pointer-events: none; }
     .ba-tag-before { left: 14px; background: rgba(0,0,0,0.65); color: #fff; }
@@ -217,7 +217,6 @@
       .hero-title { font-size: 3rem; }
       .map-inner { flex-direction: column; }
       .map-iframe-wrap, .service-area-card { width: 100%; min-width: auto; }
-      .ba-wrap { height: 220px; }
       .work-photo-card img { height: 220px; }
     }
   </style>
@@ -292,9 +291,7 @@
     <p class="ba-slider-label">Drag to compare — Gutter Cleaning</p>
     <div class="ba-wrap" id="ba1">
       <div class="ba-after" id="ba1-after"></div>
-      <div class="ba-before-clip" id="ba1-clip">
-        <div class="ba-before-inner" id="ba1-inner"></div>
-      </div>
+      <div class="ba-before" id="ba1-before"></div>
       <div class="ba-divider" id="ba1-div"><div class="ba-knob">◄►</div></div>
       <span class="ba-tag ba-tag-before">Before</span>
       <span class="ba-tag ba-tag-after">After</span>
@@ -353,35 +350,41 @@
   setInterval(nextSlide, 5000);
 
   const GUTTER_URL = 'https://lh3.googleusercontent.com/grass-cs/ANxoTn1qBx-PrUAZXBfHGzAlXMpHAWTvPTC_rX7yst4TbvWcpuVDe86DYosjLaB8J8mRgBJUBfhL1rK0mYL9Kt0nMTCWZXv2wK-aHN2PN8qnNLLiJOWnuKwUM68G-qoXa4Y45UgqEqwt-up23e8m=w1200-h900-p-k-no';
-  const afterEl = document.getElementById('ba1-after');
-  const innerEl = document.getElementById('ba1-inner');
+  const afterEl  = document.getElementById('ba1-after');
+  const beforeEl = document.getElementById('ba1-before');
+  afterEl.style.backgroundImage  = 'url("' + GUTTER_URL + '")';
+  beforeEl.style.backgroundImage = 'url("' + GUTTER_URL + '")';  
   afterEl.style.backgroundImage = 'url("' + GUTTER_URL + '")';
   afterEl.style.backgroundSize = '200% 100%';
   afterEl.style.backgroundPosition = '100% center';
-  innerEl.style.backgroundImage = 'url("' + GUTTER_URL + '")';
-  innerEl.style.backgroundSize = '100% 100%';
-  innerEl.style.backgroundPosition = 'left center';
+  beforeEl.style.backgroundImage = 'url("' + GUTTER_URL + '")';
+  beforeEl.style.backgroundSize = '100% 100%';
+  beforeEl.style.backgroundPosition = 'left center';
 
-  function makeSlider(wrapId, clipId, divId) {
-    const wrap = document.getElementById(wrapId);
-    const clip = document.getElementById(clipId);
-    const div  = document.getElementById(divId);
+  function makeSlider(wrapId, beforeId, divId) {
+    const wrap   = document.getElementById(wrapId);
+    const before = document.getElementById(beforeId);
+    const div    = document.getElementById(divId);
     let active = false;
+
     function moveTo(clientX) {
       const r = wrap.getBoundingClientRect();
       let p = (clientX - r.left) / r.width;
-      p = Math.max(0.04, Math.min(0.96, p));
-      clip.style.width = (p * 100) + '%';
-      div.style.left   = (p * 100) + '%';
+      p = Math.max(0.02, Math.min(0.98, p));
+      const pct = p * 100;
+      before.style.clipPath = 'inset(0 ' + (100 - pct).toFixed(2) + '% 0 0)';
+      div.style.left = pct + '%';
     }
-    wrap.addEventListener('mousedown', e => { active = true; moveTo(e.clientX); });
+
+    wrap.addEventListener('mousedown',  e => { active = true; moveTo(e.clientX); e.preventDefault(); });
     wrap.addEventListener('touchstart', e => { active = true; moveTo(e.touches[0].clientX); }, { passive: true });
-    window.addEventListener('mousemove', e => { if (active) moveTo(e.clientX); });
-    window.addEventListener('touchmove', e => { if (active) moveTo(e.touches[0].clientX); }, { passive: true });
-    window.addEventListener('mouseup', () => active = false);
+    window.addEventListener('mousemove',  e => { if (active) moveTo(e.clientX); });
+    window.addEventListener('touchmove',  e => { if (active) moveTo(e.touches[0].clientX); }, { passive: true });
+    window.addEventListener('mouseup',  () => active = false);
     window.addEventListener('touchend', () => active = false);
   }
-  makeSlider('ba1', 'ba1-clip', 'ba1-div');
+
+  makeSlider('ba1', 'ba1-before', 'ba1-div');
 
   const hamburger = document.getElementById('hamburger');
   const navLinks  = document.getElementById('navLinks');
