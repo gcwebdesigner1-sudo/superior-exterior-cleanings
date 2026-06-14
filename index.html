@@ -82,10 +82,7 @@
       min-height: 620px;
       overflow: hidden;
     }
-    .slides-container {
-      position: absolute;
-      inset: 0;
-    }
+    .slides-container { position: absolute; inset: 0; }
     .slide {
       position: absolute;
       inset: 0;
@@ -95,11 +92,7 @@
       transition: opacity 1.4s ease-in-out;
     }
     .slide.active { opacity: 1; }
-    .hero-overlay {
-      position: absolute;
-      inset: 0;
-      background: rgba(0,0,0,0.50);
-    }
+    .hero-overlay { position: absolute; inset: 0; background: rgba(0,0,0,0.48); }
     .hero-content {
       position: relative;
       z-index: 2;
@@ -113,463 +106,108 @@
       padding: 20px 40px;
       padding-top: 80px;
     }
-    .hero-tagline {
-      font-size: 0.72rem;
-      letter-spacing: 5px;
-      font-weight: 700;
-      color: rgba(255,255,255,0.75);
-      margin-bottom: 18px;
-      text-transform: uppercase;
-    }
-    .hero-title {
-      font-size: clamp(3rem, 8.5vw, 6.5rem);
-      font-weight: 900;
-      line-height: 0.95;
-      text-transform: uppercase;
-      margin-bottom: 22px;
-      letter-spacing: -1px;
-    }
+    .hero-tagline { font-size: 0.72rem; letter-spacing: 5px; font-weight: 700; color: rgba(255,255,255,0.75); margin-bottom: 18px; text-transform: uppercase; }
+    .hero-title { font-size: clamp(3rem, 8.5vw, 6.5rem); font-weight: 900; line-height: 0.95; text-transform: uppercase; margin-bottom: 22px; letter-spacing: -1px; }
     .hero-title .accent { color: var(--blue); }
-    .hero-sub {
-      font-size: 1rem;
-      max-width: 480px;
-      line-height: 1.6;
-      font-weight: 400;
-      font-family: Arial, sans-serif;
-      color: rgba(255,255,255,0.9);
-      margin-bottom: 40px;
-    }
-    .hero-ctas {
-      display: flex;
-      gap: 14px;
-      flex-wrap: wrap;
-      justify-content: center;
-      margin-bottom: 36px;
-    }
-    .btn-primary {
-      background: var(--blue);
-      color: #fff;
-      text-decoration: none;
-      padding: 16px 32px;
-      font-size: 0.82rem;
-      font-weight: 900;
-      letter-spacing: 1.5px;
-      border: 2px solid var(--blue);
-      border-radius: 2px;
-      transition: all 0.2s;
-      text-transform: uppercase;
-    }
+    .hero-sub { font-size: 1rem; max-width: 480px; line-height: 1.6; font-weight: 400; font-family: Arial, sans-serif; color: rgba(255,255,255,0.9); margin-bottom: 40px; }
+    .hero-ctas { display: flex; gap: 14px; flex-wrap: wrap; justify-content: center; margin-bottom: 36px; }
+    .btn-primary { background: var(--blue); color: #fff; text-decoration: none; padding: 16px 32px; font-size: 0.82rem; font-weight: 900; letter-spacing: 1.5px; border: 2px solid var(--blue); border-radius: 2px; transition: all 0.2s; text-transform: uppercase; }
     .btn-primary:hover { background: var(--blue-dark); border-color: var(--blue-dark); }
-    .btn-outline {
-      color: #fff;
-      text-decoration: none;
-      padding: 16px 32px;
-      font-size: 0.82rem;
-      font-weight: 900;
-      letter-spacing: 1.5px;
-      border: 2px solid rgba(255,255,255,0.75);
-      border-radius: 2px;
-      transition: all 0.2s;
-      text-transform: uppercase;
-    }
+    .btn-outline { color: #fff; text-decoration: none; padding: 16px 32px; font-size: 0.82rem; font-weight: 900; letter-spacing: 1.5px; border: 2px solid rgba(255,255,255,0.75); border-radius: 2px; transition: all 0.2s; text-transform: uppercase; }
     .btn-outline:hover { background: rgba(255,255,255,0.12); }
-    .hero-stars {
-      font-family: Arial, sans-serif;
-      font-size: 0.88rem;
-      color: rgba(255,255,255,0.85);
-    }
+    .hero-stars { font-family: Arial, sans-serif; font-size: 0.88rem; color: rgba(255,255,255,0.85); }
     .stars-gold { color: #FBBF24; font-size: 1rem; letter-spacing: 1px; }
 
-    /* ===== SHARED SECTION STYLES ===== */
-    .section-label {
-      font-size: 0.68rem;
-      letter-spacing: 5px;
-      color: var(--blue);
-      font-weight: 900;
-      text-align: center;
-      text-transform: uppercase;
-      margin-bottom: 10px;
-    }
-    .section-title {
-      font-size: clamp(1.7rem, 3vw, 2.6rem);
-      font-weight: 900;
-      text-align: center;
-      text-transform: uppercase;
-      letter-spacing: -0.5px;
-      margin-bottom: 52px;
-    }
+    /* ===== SHARED ===== */
+    .section-label { font-size: 0.68rem; letter-spacing: 5px; color: var(--blue); font-weight: 900; text-align: center; text-transform: uppercase; margin-bottom: 10px; }
+    .section-title { font-size: clamp(1.7rem, 3vw, 2.6rem); font-weight: 900; text-align: center; text-transform: uppercase; letter-spacing: -0.5px; margin-bottom: 52px; }
 
     /* ===== SERVICES ===== */
-    #services {
-      background: var(--light);
-      padding: 88px 48px;
-    }
-    .services-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
-      gap: 20px;
-      max-width: 1040px;
-      margin: 0 auto;
-    }
-    .service-card {
-      background: #fff;
-      padding: 40px 28px;
-      text-align: center;
-      border-radius: 4px;
-      box-shadow: 0 2px 16px rgba(0,0,0,0.065);
-      transition: transform 0.2s, box-shadow 0.2s;
-    }
-    .service-card:hover {
-      transform: translateY(-3px);
-      box-shadow: 0 8px 24px rgba(0,0,0,0.10);
-    }
+    #services { background: var(--light); padding: 88px 48px; }
+    .services-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(210px, 1fr)); gap: 20px; max-width: 1040px; margin: 0 auto; }
+    .service-card { background: #fff; padding: 40px 28px; text-align: center; border-radius: 4px; box-shadow: 0 2px 16px rgba(0,0,0,0.065); transition: transform 0.2s, box-shadow 0.2s; }
+    .service-card:hover { transform: translateY(-3px); box-shadow: 0 8px 24px rgba(0,0,0,0.10); }
     .service-icon { font-size: 2.4rem; margin-bottom: 18px; }
-    .service-name {
-      font-size: 0.8rem;
-      font-weight: 900;
-      letter-spacing: 1.5px;
-      text-transform: uppercase;
-      margin-bottom: 10px;
-    }
-    .service-desc {
-      font-size: 0.875rem;
-      color: #666;
-      font-family: Arial, sans-serif;
-      line-height: 1.6;
-      font-weight: 400;
-    }
+    .service-name { font-size: 0.8rem; font-weight: 900; letter-spacing: 1.5px; text-transform: uppercase; margin-bottom: 10px; }
+    .service-desc { font-size: 0.875rem; color: #666; font-family: Arial, sans-serif; line-height: 1.6; font-weight: 400; }
 
-    /* ===== RATE US — directly under services ===== */
-    .rate-us {
-      background: var(--dark);
-      color: #fff;
-      text-align: center;
-      padding: 52px 40px;
-    }
+    /* ===== RATE US ===== */
+    .rate-us { background: var(--dark); color: #fff; text-align: center; padding: 52px 40px; }
     .rate-us-icon { font-size: 2rem; margin-bottom: 10px; }
-    .rate-us-eyebrow {
-      font-size: 0.68rem;
-      letter-spacing: 5px;
-      color: var(--blue);
-      font-weight: 900;
-      text-transform: uppercase;
-      margin-bottom: 10px;
-    }
-    .rate-us-title {
-      font-size: clamp(1rem, 2vw, 1.3rem);
-      font-weight: 900;
-      text-transform: uppercase;
-      letter-spacing: 1px;
-      margin-bottom: 28px;
-    }
-    .btn-review {
-      display: inline-block;
-      background: var(--blue);
-      color: #fff;
-      text-decoration: none;
-      padding: 14px 38px;
-      font-size: 0.82rem;
-      font-weight: 900;
-      letter-spacing: 1.5px;
-      border-radius: 2px;
-      text-transform: uppercase;
-      transition: background 0.2s;
-    }
+    .rate-us-eyebrow { font-size: 0.68rem; letter-spacing: 5px; color: var(--blue); font-weight: 900; text-transform: uppercase; margin-bottom: 10px; }
+    .rate-us-title { font-size: clamp(1rem, 2vw, 1.3rem); font-weight: 900; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 28px; }
+    .btn-review { display: inline-block; background: var(--blue); color: #fff; text-decoration: none; padding: 14px 38px; font-size: 0.82rem; font-weight: 900; letter-spacing: 1.5px; border-radius: 2px; text-transform: uppercase; transition: background 0.2s; }
     .btn-review:hover { background: var(--blue-dark); }
 
     /* ===== REVIEWS ===== */
-    #reviews {
-      background: #fff;
-      padding: 88px 48px;
-    }
-    .reviews-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 22px;
-      max-width: 1040px;
-      margin: 0 auto 40px;
-    }
-    .review-card {
-      border: 1px solid #e8e8e8;
-      border-radius: 4px;
-      padding: 30px 26px;
-      transition: box-shadow 0.2s;
-    }
+    #reviews { background: #fff; padding: 88px 48px; }
+    .reviews-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 22px; max-width: 1040px; margin: 0 auto 40px; }
+    .review-card { border: 1px solid #e8e8e8; border-radius: 4px; padding: 30px 26px; transition: box-shadow 0.2s; }
     .review-card:hover { box-shadow: 0 4px 20px rgba(0,0,0,0.08); }
     .review-stars { color: #FBBF24; font-size: 1.1rem; margin-bottom: 14px; letter-spacing: 1px; }
-    .review-text {
-      font-size: 0.9rem;
-      color: #444;
-      line-height: 1.7;
-      font-family: Arial, sans-serif;
-      font-style: italic;
-      font-weight: 400;
-      margin-bottom: 18px;
-    }
+    .review-text { font-size: 0.9rem; color: #444; line-height: 1.7; font-family: Arial, sans-serif; font-style: italic; font-weight: 400; margin-bottom: 18px; }
     .review-author { font-size: 0.8rem; font-weight: 900; letter-spacing: 0.5px; margin-bottom: 3px; }
     .review-source { font-size: 0.75rem; color: #999; font-family: Arial, sans-serif; font-weight: 400; }
     .reviews-cta { text-align: center; }
-    .reviews-cta a {
-      color: var(--blue);
-      font-weight: 700;
-      text-decoration: none;
-      font-size: 0.95rem;
-      font-family: Arial, sans-serif;
-      border-bottom: 1px solid var(--blue);
-      padding-bottom: 2px;
-      transition: opacity 0.2s;
-    }
+    .reviews-cta a { color: var(--blue); font-weight: 700; text-decoration: none; font-size: 0.95rem; font-family: Arial, sans-serif; border-bottom: 1px solid var(--blue); padding-bottom: 2px; transition: opacity 0.2s; }
     .reviews-cta a:hover { opacity: 0.75; }
 
-    /* ===== BEFORE / AFTER ===== */
-    #gallery {
-      background: var(--light);
-      padding: 88px 48px;
-    }
-    .ba-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-      gap: 24px;
-      max-width: 1040px;
-      margin: 0 auto 28px;
-    }
-    .ba-wrap {
-      position: relative;
-      width: 100%;
-      height: 280px;
-      overflow: hidden;
-      border-radius: 4px;
-      cursor: ew-resize;
-      user-select: none;
-      -webkit-user-select: none;
-      box-shadow: 0 2px 16px rgba(0,0,0,0.10);
-    }
-    .ba-after {
-      position: absolute;
-      inset: 0;
-      background-size: cover;
-      background-position: center;
-    }
-    .ba-before-clip {
-      position: absolute;
-      top: 0; left: 0; bottom: 0;
-      width: 50%;
-      overflow: hidden;
-    }
-    .ba-before-inner {
-      position: absolute;
-      top: 0; left: 0;
-      width: 200%;
-      height: 100%;
-      background-size: 50% 100%;
-      background-repeat: no-repeat;
-      background-position: left center;
-    }
-    .ba-divider {
-      position: absolute;
-      top: 0; bottom: 0;
-      left: 50%;
-      width: 3px;
-      background: #fff;
-      transform: translateX(-50%);
-      pointer-events: none;
-    }
-    .ba-knob {
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      width: 40px;
-      height: 40px;
-      background: #fff;
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.3);
-      font-size: 0.65rem;
-      color: var(--blue);
-      font-weight: 900;
-    }
-    .ba-tag {
-      position: absolute;
-      bottom: 12px;
-      font-size: 0.65rem;
-      font-weight: 900;
-      letter-spacing: 2px;
-      padding: 4px 10px;
-      border-radius: 2px;
-      text-transform: uppercase;
-    }
-    .ba-tag-before { left: 12px; background: rgba(0,0,0,0.65); color: #fff; }
-    .ba-tag-after  { right: 12px; background: var(--blue); color: #fff; }
+    /* ===== GALLERY ===== */
+    #gallery { background: var(--light); padding: 88px 48px; }
+    .ba-slider-wrap { max-width: 820px; margin: 0 auto 44px; }
+    .ba-slider-label { text-align: center; font-size: 0.68rem; letter-spacing: 3px; font-weight: 900; color: #888; text-transform: uppercase; margin-bottom: 14px; }
+    .ba-wrap { position: relative; width: 100%; height: 340px; overflow: hidden; border-radius: 6px; cursor: ew-resize; user-select: none; -webkit-user-select: none; box-shadow: 0 4px 24px rgba(0,0,0,0.15); }
+    .ba-after { position: absolute; inset: 0; background-repeat: no-repeat; }
+    .ba-before-clip { position: absolute; top: 0; left: 0; bottom: 0; width: 50%; overflow: hidden; }
+    .ba-before-inner { position: absolute; top: 0; left: 0; width: 200%; height: 100%; background-repeat: no-repeat; }
+    .ba-divider { position: absolute; top: 0; bottom: 0; left: 50%; width: 3px; background: #fff; transform: translateX(-50%); pointer-events: none; }
+    .ba-knob { position: absolute; top: 50%; left: 50%; transform: translate(-50%,-50%); width: 44px; height: 44px; background: #fff; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 2px 10px rgba(0,0,0,0.35); font-size: 0.65rem; color: var(--blue); font-weight: 900; }
+    .ba-tag { position: absolute; bottom: 14px; font-size: 0.65rem; font-weight: 900; letter-spacing: 2px; padding: 5px 12px; border-radius: 2px; text-transform: uppercase; pointer-events: none; }
+    .ba-tag-before { left: 14px; background: rgba(0,0,0,0.65); color: #fff; }
+    .ba-tag-after { right: 14px; background: var(--blue); color: #fff; }
+    .work-photos-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; max-width: 820px; margin: 0 auto 28px; }
+    .work-photo-card { position: relative; border-radius: 6px; overflow: hidden; box-shadow: 0 2px 16px rgba(0,0,0,0.10); background: #111; }
+    .work-photo-card img { width: 100%; height: 280px; object-fit: cover; display: block; transition: transform 0.3s; }
+    .work-photo-card:hover img { transform: scale(1.03); }
+    .work-photo-caption { position: absolute; bottom: 0; left: 0; right: 0; padding: 10px 14px; background: linear-gradient(transparent, rgba(0,0,0,0.72)); color: #fff; font-size: 0.75rem; font-weight: 900; letter-spacing: 1.5px; text-transform: uppercase; }
     .gallery-more { text-align: center; }
-    .gallery-more a {
-      color: var(--blue);
-      font-weight: 700;
-      font-family: Arial, sans-serif;
-      text-decoration: none;
-      font-size: 0.9rem;
-      border-bottom: 1px solid var(--blue);
-      padding-bottom: 2px;
-      transition: opacity 0.2s;
-    }
+    .gallery-more a { color: var(--blue); font-weight: 700; font-family: Arial, sans-serif; text-decoration: none; font-size: 0.9rem; border-bottom: 1px solid var(--blue); padding-bottom: 2px; transition: opacity 0.2s; }
     .gallery-more a:hover { opacity: 0.75; }
 
-    /* ===== MAP / SERVICE AREA ===== */
-    #service-area {
-      background: #fff;
-      padding: 88px 48px;
-    }
-    .map-inner {
-      max-width: 1040px;
-      margin: 0 auto;
-      display: flex;
-      gap: 28px;
-      align-items: flex-start;
-      flex-wrap: wrap;
-    }
-    .map-iframe-wrap {
-      flex: 2;
-      min-width: 280px;
-    }
-    .map-iframe-wrap iframe {
-      width: 100%;
-      height: 340px;
-      border: 0;
-      border-radius: 4px;
-      box-shadow: 0 2px 16px rgba(0,0,0,0.08);
-    }
-    .service-area-card {
-      flex: 1;
-      min-width: 200px;
-      background: var(--light);
-      border-radius: 4px;
-      padding: 24px 20px;
-      text-align: center;
-    }
-    .service-area-card h4 {
-      font-size: 0.72rem;
-      letter-spacing: 3px;
-      text-transform: uppercase;
-      font-weight: 900;
-      margin-bottom: 16px;
-      color: var(--blue);
-    }
-    .wa-map-svg {
-      width: 100%;
-      border-radius: 4px;
-      margin-bottom: 14px;
-      overflow: hidden;
-    }
-    .service-cities {
-      font-size: 0.82rem;
-      color: #555;
-      font-family: Arial, sans-serif;
-      line-height: 1.9;
-      font-weight: 400;
-    }
+    /* ===== SERVICE AREA ===== */
+    #service-area { background: #fff; padding: 88px 48px; }
+    .map-inner { max-width: 1040px; margin: 0 auto; display: flex; gap: 28px; align-items: flex-start; flex-wrap: wrap; }
+    .map-iframe-wrap { flex: 2; min-width: 280px; }
+    .map-iframe-wrap iframe { width: 100%; height: 360px; border: 0; border-radius: 6px; box-shadow: 0 2px 16px rgba(0,0,0,0.08); }
+    .service-area-card { flex: 1; min-width: 200px; background: var(--light); border-radius: 6px; padding: 28px 22px; text-align: center; }
+    .service-area-card h4 { font-size: 0.72rem; letter-spacing: 3px; text-transform: uppercase; font-weight: 900; margin-bottom: 18px; color: var(--blue); }
+    .service-cities { font-size: 0.85rem; color: #555; font-family: Arial, sans-serif; line-height: 2; font-weight: 400; }
 
-    /* ===== BOOKING / CTA BAND ===== */
-    .booking-band {
-      background: var(--blue);
-      padding: 88px 48px;
-      text-align: center;
-      color: #fff;
-    }
+    /* ===== BOOKING ===== */
+    .booking-band { background: var(--blue); padding: 88px 48px; text-align: center; color: #fff; }
     .booking-band .section-label { color: rgba(255,255,255,0.65); }
-    .booking-title {
-      font-size: clamp(1.7rem, 3.5vw, 2.6rem);
-      font-weight: 900;
-      text-transform: uppercase;
-      margin-bottom: 10px;
-      letter-spacing: -0.5px;
-    }
-    .booking-sub {
-      font-family: Arial, sans-serif;
-      font-weight: 400;
-      margin-bottom: 40px;
-      font-size: 0.95rem;
-      opacity: 0.88;
-    }
+    .booking-title { font-size: clamp(1.7rem, 3.5vw, 2.6rem); font-weight: 900; text-transform: uppercase; margin-bottom: 10px; letter-spacing: -0.5px; }
+    .booking-sub { font-family: Arial, sans-serif; font-weight: 400; margin-bottom: 40px; font-size: 0.95rem; opacity: 0.88; }
     .booking-btns { display: flex; gap: 14px; justify-content: center; flex-wrap: wrap; }
-    .btn-book {
-      display: inline-block;
-      background: #fff;
-      color: var(--blue);
-      text-decoration: none;
-      padding: 18px 48px;
-      font-size: 0.85rem;
-      font-weight: 900;
-      letter-spacing: 2px;
-      border-radius: 2px;
-      text-transform: uppercase;
-      transition: all 0.2s;
-    }
+    .btn-book { display: inline-block; background: #fff; color: var(--blue); text-decoration: none; padding: 18px 48px; font-size: 0.85rem; font-weight: 900; letter-spacing: 2px; border-radius: 2px; text-transform: uppercase; transition: all 0.2s; }
     .btn-book:hover { background: #e8f0fd; }
-    .btn-call-band {
-      display: inline-block;
-      background: transparent;
-      color: #fff;
-      text-decoration: none;
-      padding: 18px 48px;
-      font-size: 0.85rem;
-      font-weight: 900;
-      letter-spacing: 2px;
-      border: 2px solid rgba(255,255,255,0.65);
-      border-radius: 2px;
-      text-transform: uppercase;
-      transition: all 0.2s;
-    }
+    .btn-call-band { display: inline-block; background: transparent; color: #fff; text-decoration: none; padding: 18px 48px; font-size: 0.85rem; font-weight: 900; letter-spacing: 2px; border: 2px solid rgba(255,255,255,0.65); border-radius: 2px; text-transform: uppercase; transition: all 0.2s; }
     .btn-call-band:hover { background: rgba(255,255,255,0.10); }
 
     /* ===== FOOTER ===== */
-    footer {
-      background: var(--darker);
-      color: #888;
-      text-align: center;
-      padding: 40px 48px;
-      font-size: 0.85rem;
-    }
-    .footer-logo {
-      font-size: 0.95rem;
-      font-weight: 900;
-      color: #fff;
-      letter-spacing: 1.5px;
-      text-transform: uppercase;
-      margin-bottom: 10px;
-    }
+    footer { background: var(--darker); color: #888; text-align: center; padding: 40px 48px; font-size: 0.85rem; }
+    .footer-logo { font-size: 0.95rem; font-weight: 900; color: #fff; letter-spacing: 1.5px; text-transform: uppercase; margin-bottom: 10px; }
     .footer-logo .accent { color: var(--blue); }
-    .footer-info {
-      font-family: Arial, sans-serif;
-      font-weight: 400;
-      line-height: 1.8;
-    }
+    .footer-info { font-family: Arial, sans-serif; font-weight: 400; line-height: 1.8; }
     .footer-info a { color: #888; text-decoration: none; }
     .footer-info a:hover { color: var(--blue); }
 
     /* ===== MOBILE ===== */
     @media (max-width: 768px) {
       nav { padding: 0 20px; }
-      .nav-links {
-        display: none;
-        position: fixed;
-        top: 64px; left: 0; right: 0;
-        background: #fff;
-        flex-direction: column;
-        align-items: center;
-        gap: 0;
-        padding: 16px 0 24px;
-        box-shadow: 0 4px 14px rgba(0,0,0,0.12);
-        z-index: 999;
-      }
+      .nav-links { display: none; position: fixed; top: 64px; left: 0; right: 0; background: #fff; flex-direction: column; align-items: center; gap: 0; padding: 16px 0 24px; box-shadow: 0 4px 14px rgba(0,0,0,0.12); z-index: 999; }
       .nav-links.open { display: flex; }
-      .nav-links a {
-        padding: 13px 0;
-        width: 100%;
-        text-align: center;
-        border-bottom: 1px solid #f0f0f0;
-      }
+      .nav-links a { padding: 13px 0; width: 100%; text-align: center; border-bottom: 1px solid #f0f0f0; }
       .btn-call-nav { margin-top: 10px; padding: 12px 40px !important; }
       .hamburger { display: flex; }
       #services, #reviews, #gallery, #service-area { padding: 64px 22px; }
@@ -579,12 +217,13 @@
       .hero-title { font-size: 3rem; }
       .map-inner { flex-direction: column; }
       .map-iframe-wrap, .service-area-card { width: 100%; min-width: auto; }
+      .ba-wrap { height: 220px; }
+      .work-photo-card img { height: 220px; }
     }
   </style>
 </head>
 <body>
 
-<!-- ===== NAVBAR ===== -->
 <nav id="navbar">
   <a class="logo" href="#home">SUPERIOR <span class="accent">EXTERIOR</span></a>
   <button class="hamburger" id="hamburger" aria-label="Menu">
@@ -598,12 +237,10 @@
   </div>
 </nav>
 
-<!-- ===== HERO / SLIDESHOW ===== -->
 <section class="hero" id="home">
   <div class="slides-container">
     <div class="slide active" style="background-image: url('https://lh3.googleusercontent.com/gps-cs-s/APNQkAHBEDLAOCwXzr4tDckWKEioQ5G1dy3jLO_RoZbgTzh9S2Qgp8UFsLEY3DfTFtG9Zm0wAXqCuyRC4WUv34zT6mXI3A1VKx2JuyipJNxJ4ApJoP4nUFuvsplrJOK96zb8vYVSDScrBrImlKq1=w1920-h1080-k-no')"></div>
-    <div class="slide" style="background-image: url('https://lh3.googleusercontent.com/gps-cs-s/APNQkAE0UiZlX6_7BrTRFzVpFyZC5hNvTP3sgaqADHx-YPHhybAX6CKgmkhswmx_vOvuYOBuNdGBeDesdWc8Q_iUk1nwhS-cil4ve5RkUJqJgOK-Y8ripgfoby6O8m5zdRBxOCnVSgiPBVrhQ7m7=w1920-h1080-k-no')"></div>
-    <div class="slide" style="background-image: url('https://lh3.googleusercontent.com/gps-cs-s/APNQkAHR1sJXWgkWd0HI2DeIXvs-iSuIfvHeSz1wxU-MtgGxrEmNwsvBHMLn5P3rnX_91i3yVBlqXPR7qWh_Hf94qTFQJT7daqsxEayoTPCxV1zPhQVLRS7kiRZV1SnBWAZ9UOwFBSyKaG-a10c=w1920-h1080-k-no')"></div>
+    <div class="slide" style="background-image: url('https://lh3.googleusercontent.com/grass-cs/ANxoTn1qBx-PrUAZXBfHGzAlXMpHAWTvPTC_rX7yst4TbvWcpuVDe86DYosjLaB8J8mRgBJUBfhL1rK0mYL9Kt0nMTCWZXv2wK-aHN2PN8qnNLLiJOWnuKwUM68G-qoXa4Y45UgqEqwt-up23e8m=w1920-h1080-k-no'); background-position: center 40%;"></div>
   </div>
   <div class="hero-overlay"></div>
   <div class="hero-content">
@@ -614,41 +251,22 @@
       <a href="tel:2064953127" class="btn-primary">CALL (206) 495-3127</a>
       <a href="#services" class="btn-outline">OUR SERVICES</a>
     </div>
-    <div class="hero-stars">
-      <span class="stars-gold">★★★★★</span>&nbsp; 5.0 &nbsp;·&nbsp; 35 Google Reviews
-    </div>
+    <div class="hero-stars"><span class="stars-gold">★★★★★</span>&nbsp; 5.0 &nbsp;·&nbsp; 35 Google Reviews</div>
   </div>
 </section>
 
-<!-- ===== SERVICES ===== -->
 <section id="services">
   <p class="section-label">What We Do</p>
   <h2 class="section-title">Our Services</h2>
   <div class="services-grid">
-    <div class="service-card">
-      <div class="service-icon">🏠</div>
-      <div class="service-name">House Washing</div>
-      <div class="service-desc">Full exterior house washing that removes dirt, mold, mildew, and grime. Safe for all siding types including vinyl, wood, and stucco.</div>
-    </div>
-    <div class="service-card">
-      <div class="service-icon">🚗</div>
-      <div class="service-name">Driveway & Concrete</div>
-      <div class="service-desc">High-pressure surface cleaning that blasts away oil stains, algae, moss, and years of buildup from driveways, walkways, and concrete pads.</div>
-    </div>
-    <div class="service-card">
-      <div class="service-icon">🍃</div>
-      <div class="service-name">Gutter Cleaning</div>
-      <div class="service-desc">Complete gutter cleaning and flush-out to remove debris, leaves, and buildup. We restore proper drainage and protect your home's foundation.</div>
-    </div>
-    <div class="service-card">
-      <div class="service-icon">🪵</div>
-      <div class="service-name">Deck & Patio</div>
-      <div class="service-desc">Revive your outdoor living spaces with a thorough pressure wash that lifts embedded dirt, moss, and staining from wood, composite, and stone surfaces.</div>
-    </div>
+    <div class="service-card"><div class="service-icon">🏠</div><div class="service-name">House Washing</div><div class="service-desc">Full exterior house washing that removes dirt, mold, mildew, and grime. Safe for all siding types including vinyl, wood, and stucco.</div></div>
+    <div class="service-card"><div class="service-icon">🚗</div><div class="service-name">Driveway &amp; Concrete</div><div class="service-desc">High-pressure surface cleaning that blasts away oil stains, algae, moss, and years of buildup from driveways, walkways, and concrete pads.</div></div>
+    <div class="service-card"><div class="service-icon">🍃</div><div class="service-name">Gutter Cleaning</div><div class="service-desc">Complete gutter cleaning and flush-out to remove debris, leaves, and buildup. We restore proper drainage and protect your home's foundation.</div></div>
+    <div class="service-card"><div class="service-icon">☀️</div><div class="service-name">Solar Panel Cleaning</div><div class="service-desc">Careful solar panel cleaning that removes dust, debris, and buildup to maximize energy output and protect your investment.</div></div>
+    <div class="service-card"><div class="service-icon">🪵</div><div class="service-name">Deck &amp; Patio</div><div class="service-desc">Revive your outdoor living spaces with a thorough pressure wash that lifts embedded dirt, moss, and staining from wood, composite, and stone surfaces.</div></div>
   </div>
 </section>
 
-<!-- ===== RATE US — directly under services ===== -->
 <div class="rate-us">
   <div class="rate-us-icon">⭐</div>
   <p class="rate-us-eyebrow">Loved our service?</p>
@@ -656,110 +274,60 @@
   <a href="https://search.google.com/local/writereview?placeid=ChIJ_V8zt1-HsFQRiT09c3nMuEc" class="btn-review" target="_blank" rel="noopener noreferrer">Leave a Review ↗</a>
 </div>
 
-<!-- ===== REVIEWS ===== -->
 <section id="reviews">
   <p class="section-label">Google Reviews</p>
   <h2 class="section-title">What Customers Say</h2>
   <div class="reviews-grid">
-    <div class="review-card">
-      <div class="review-stars">★★★★★</div>
-      <p class="review-text">"Communication, honest hard work, and exceptional results — this company really stands out. Their professionalism and knowledge made the whole experience easy."</p>
-      <div class="review-author">Tal B.</div>
-      <div class="review-source">via Google</div>
-    </div>
-    <div class="review-card">
-      <div class="review-stars">★★★★★</div>
-      <p class="review-text">"We just had our house, driveway, back patio, and gutters cleaned. Our house looks absolutely amazing. Can't thank you enough for the great work and service!"</p>
-      <div class="review-author">Shirley W.</div>
-      <div class="review-source">via Google</div>
-    </div>
-    <div class="review-card">
-      <div class="review-stars">★★★★★</div>
-      <p class="review-text">"I got next day service, a solid quote, and the job was 100% complete. They cleaned up behind themselves and left everything spotless. Highly recommend."</p>
-      <div class="review-author">Harold T.</div>
-      <div class="review-source">via Google</div>
-    </div>
+    <div class="review-card"><div class="review-stars">★★★★★</div><p class="review-text">"Communication, honest hard work, and exceptional results — this company really stands out. Their professionalism and knowledge made the whole experience easy."</p><div class="review-author">Tal B.</div><div class="review-source">via Google</div></div>
+    <div class="review-card"><div class="review-stars">★★★★★</div><p class="review-text">"We just had our house, driveway, back patio, and gutters cleaned. Our house looks absolutely amazing. Can't thank you enough for the great work and service!"</p><div class="review-author">Shirley W.</div><div class="review-source">via Google</div></div>
+    <div class="review-card"><div class="review-stars">★★★★★</div><p class="review-text">"I got next day service, a solid quote, and the job was 100% complete. They cleaned up behind themselves and left everything spotless. Highly recommend."</p><div class="review-author">Harold T.</div><div class="review-source">via Google</div></div>
   </div>
-  <div class="reviews-cta">
-    <a href="https://www.google.com/maps/place/Superior+Exterior+Cleanings/@47.513698,-122.1801586,13z/data=!4m8!3m7!1s0x54906a87b3375ffd:0x47b8cc79533d3d89!8m2!3d47.513698!4d-122.1801586!9m1!1b1" target="_blank" rel="noopener noreferrer">See all 35 reviews on Google ↗</a>
-  </div>
+  <div class="reviews-cta"><a href="https://www.google.com/maps/place/Superior+Exterior+Cleanings/@47.513698,-122.1801586,13z/data=!4m8!3m7!1s0x54906a87b3375ffd:0x47b8cc79533d3d89!8m2!3d47.513698!4d-122.1801586!9m1!1b1" target="_blank" rel="noopener noreferrer">See all 35 reviews on Google ↗</a></div>
 </section>
 
-<!-- ===== BEFORE / AFTER ===== -->
 <section id="gallery">
   <p class="section-label">Before &amp; After</p>
   <h2 class="section-title">Our Work</h2>
-  <div class="ba-grid">
+  <div class="ba-slider-wrap">
+    <p class="ba-slider-label">Drag to compare — Gutter Cleaning</p>
     <div class="ba-wrap" id="ba1">
-      <div class="ba-after" style="background-image: url('https://lh3.googleusercontent.com/gps-cs-s/APNQkAHBEDLAOCwXzr4tDckWKEioQ5G1dy3jLO_RoZbgTzh9S2Qgp8UFsLEY3DfTFtG9Zm0wAXqCuyRC4WUv34zT6mXI3A1VKx2JuyipJNxJ4ApJoP4nUFuvsplrJOK96zb8vYVSDScrBrImlKq1=w1920-h1080-k-no')"></div>
+      <div class="ba-after" id="ba1-after"></div>
       <div class="ba-before-clip" id="ba1-clip">
-        <div class="ba-before-inner" style="background-image: url('https://lh3.googleusercontent.com/gps-cs-s/APNQkAE0UiZlX6_7BrTRFzVpFyZC5hNvTP3sgaqADHx-YPHhybAX6CKgmkhswmx_vOvuYOBuNdGBeDesdWc8Q_iUk1nwhS-cil4ve5RkUJqJgOK-Y8ripgfoby6O8m5zdRBxOCnVSgiPBVrhQ7m7=w1920-h1080-k-no'); background-size: 200% 100%; background-position: left center;"></div>
+        <div class="ba-before-inner" id="ba1-inner"></div>
       </div>
-      <div class="ba-divider" id="ba1-div">
-        <div class="ba-knob">◀▶</div>
-      </div>
-      <span class="ba-tag ba-tag-before">Before</span>
-      <span class="ba-tag ba-tag-after">After</span>
-    </div>
-    <div class="ba-wrap" id="ba2">
-      <div class="ba-after" style="background-image: url('https://lh3.googleusercontent.com/gps-cs-s/APNQkAHR1sJXWgkWd0HI2DeIXvs-iSuIfvHeSz1wxU-MtgGxrEmNwsvBHMLn5P3rnX_91i3yVBlqXPR7qWh_Hf94qTFQJT7daqsxEayoTPCxV1zPhQVLRS7kiRZV1SnBWAZ9UOwFBSyKaG-a10c=w1920-h1080-k-no')"></div>
-      <div class="ba-before-clip" id="ba2-clip">
-        <div class="ba-before-inner" style="background-image: url('https://lh3.googleusercontent.com/gps-cs-s/APNQkAE0UiZlX6_7BrTRFzVpFyZC5hNvTP3sgaqADHx-YPHhybAX6CKgmkhswmx_vOvuYOBuNdGBeDesdWc8Q_iUk1nwhS-cil4ve5RkUJqJgOK-Y8ripgfoby6O8m5zdRBxOCnVSgiPBVrhQ7m7=w1920-h1080-k-no'); background-size: 200% 100%; background-position: left center;"></div>
-      </div>
-      <div class="ba-divider" id="ba2-div">
-        <div class="ba-knob">◀▶</div>
-      </div>
+      <div class="ba-divider" id="ba1-div"><div class="ba-knob">◄►</div></div>
       <span class="ba-tag ba-tag-before">Before</span>
       <span class="ba-tag ba-tag-after">After</span>
     </div>
   </div>
-  <div class="gallery-more">
-    <a href="https://www.google.com/maps/place/Superior+Exterior+Cleanings/@47.513698,-122.1801586,13z" target="_blank" rel="noopener noreferrer">See more photos on Google ↗</a>
+  <div class="work-photos-grid">
+    <div class="work-photo-card">
+      <img src="https://lh3.googleusercontent.com/gps-cs-s/APNQkAHBEDLAOCwXzr4tDckWKEioQ5G1dy3jLO_RoZbgTzh9S2Qgp8UFsLEY3DfTFtG9Zm0wAXqCuyRC4WUv34zT6mXI3A1VKx2JuyipJNxJ4ApJoP4nUFuvsplrJOK96zb8vYVSDScrBrImlKq1=w1920-h1080-k-no" alt="House siding before and after" loading="lazy">
+      <div class="work-photo-caption">House Siding — Before &amp; After</div>
+    </div>
+    <div class="work-photo-card">
+      <img src="https://lh3.googleusercontent.com/gps-cs-s/APNQkAE0UiZlX6_7BrTRFzVpFyZC5hNvTP3sgaqADHx-YPHhybAX6CKgmkhswmx_vOvuYOBuNdGBeDesdWc8Q_iUk1nwhS-cil4ve5RkUJqJgOK-Y8ripgfoby6O8m5zdRBxOCnVSgiPBVrhQ7m7=w1920-h1080-k-no" alt="Solar panel cleaning" loading="lazy">
+      <div class="work-photo-caption">Solar Panel Cleaning</div>
+    </div>
   </div>
+  <div class="gallery-more"><a href="https://www.google.com/maps/place/Superior+Exterior+Cleanings/@47.513698,-122.1801586,13z" target="_blank" rel="noopener noreferrer">See more photos on Google ↗</a></div>
 </section>
 
-<!-- ===== SERVICE AREA / MAP ===== -->
 <section id="service-area">
   <p class="section-label">Where We Serve</p>
   <h2 class="section-title" style="margin-bottom: 8px;">Service Area</h2>
   <p style="text-align:center; font-family:Arial,sans-serif; color:#666; font-size:0.9rem; font-weight:400; margin-bottom:44px;">Serving homes and businesses across the Greater Seattle area</p>
   <div class="map-inner">
     <div class="map-iframe-wrap">
-      <iframe
-        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d173423.66876799!2d-122.43539!3d47.51369!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x54906a87b3375ffd%3A0x47b8cc79533d3d89!2sSuperior%20Exterior%20Cleanings!5e0!3m2!1sen!2sus!4v1718000000000!5m2!1sen!2sus"
-        allowfullscreen="" loading="lazy"
-        referrerpolicy="no-referrer-when-downgrade"
-        title="Superior Exterior Cleanings location">
-      </iframe>
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d173423.66876799!2d-122.43539!3d47.51369!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x54906a87b3375ffd%3A0x47b8cc79533d3d89!2sSuperior%20Exterior%20Cleanings!5e0!3m2!1sen!2sus!4v1718000000000!5m2!1sen!2sus" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Superior Exterior Cleanings location"></iframe>
     </div>
     <div class="service-area-card">
       <h4>📍 Service Area</h4>
-      <svg class="wa-map-svg" viewBox="0 0 220 200" xmlns="http://www.w3.org/2000/svg" style="border-radius:4px;">
-        <rect width="220" height="200" fill="#dce8f5"/>
-        <path d="M10,30 L200,30 L205,38 L205,65 L192,75 L188,115 L175,128 L162,152 L150,165 L130,172 L105,172 L85,167 L65,167 L46,158 L28,142 L16,108 L12,70 Z"
-              fill="#c5d8ec" stroke="#9ab6cd" stroke-width="1.5"/>
-        <path d="M62,55 L80,62 L85,80 L82,105 L72,118 L62,113 L55,95 L54,72 Z" fill="#a0bcd8"/>
-        <path d="M30,45 L60,45 L65,55 L62,65 L45,70 L28,62 Z" fill="#b8cfe0"/>
-        <circle cx="88" cy="92" r="28" fill="rgba(26,111,196,0.18)" stroke="#1a6fc4" stroke-width="2.5"/>
-        <circle cx="80" cy="83" r="4" fill="#1a6fc4"/>
-        <text x="86" y="87" font-size="8" fill="#1a6fc4" font-weight="bold" font-family="Arial">Seattle</text>
-        <circle cx="86" cy="96" r="3" fill="#1a6fc4"/>
-        <text x="91" y="100" font-size="7" fill="#1a6fc4" font-family="Arial">Renton</text>
-        <circle cx="90" cy="108" r="3" fill="#1a6fc4"/>
-        <text x="95" y="112" font-size="7" fill="#1a6fc4" font-family="Arial">Kent</text>
-        <text x="185" y="165" font-size="8" fill="#999" font-family="Arial">WA</text>
-      </svg>
-      <div class="service-cities">
-        Seattle · Renton · Kent<br>
-        Bellevue · Auburn<br>
-        Federal Way · Tacoma<br>
-        &amp; Surrounding Areas
-      </div>
+      <div class="service-cities">Seattle · Renton · Kent<br>Bellevue · Auburn<br>Federal Way · Tacoma<br>Covington · Maple Valley<br>&amp; Surrounding Areas</div>
     </div>
   </div>
 </section>
 
-<!-- ===== BOOKING CTA BAND ===== -->
 <div class="booking-band">
   <p class="section-label">Get Started</p>
   <h2 class="booking-title">Ready for a Spotless Exterior?</h2>
@@ -770,7 +338,6 @@
   </div>
 </div>
 
-<!-- ===== FOOTER ===== -->
 <footer>
   <div class="footer-logo">Superior <span class="accent">Exterior</span> Cleanings</div>
   <div class="footer-info">
@@ -780,29 +347,26 @@
 </footer>
 
 <script>
-  /* --- Slideshow --- */
   const slides = document.querySelectorAll('.slide');
   let current = 0;
-  const nextSlide = () => {
-    slides[current].classList.remove('active');
-    current = (current + 1) % slides.length;
-    slides[current].classList.add('active');
-  };
-  setInterval(nextSlide, 4800);
+  const nextSlide = () => { slides[current].classList.remove('active'); current = (current + 1) % slides.length; slides[current].classList.add('active'); };
+  setInterval(nextSlide, 5000);
 
-  /* --- Mobile Nav --- */
-  const hamburger = document.getElementById('hamburger');
-  const navLinks  = document.getElementById('navLinks');
-  hamburger.addEventListener('click', () => navLinks.classList.toggle('open'));
-  navLinks.querySelectorAll('a').forEach(a => a.addEventListener('click', () => navLinks.classList.remove('open')));
+  const GUTTER_URL = 'https://lh3.googleusercontent.com/grass-cs/ANxoTn1qBx-PrUAZXBfHGzAlXMpHAWTvPTC_rX7yst4TbvWcpuVDe86DYosjLaB8J8mRgBJUBfhL1rK0mYL9Kt0nMTCWZXv2wK-aHN2PN8qnNLLiJOWnuKwUM68G-qoXa4Y45UgqEqwt-up23e8m=w1200-h900-p-k-no';
+  const afterEl = document.getElementById('ba1-after');
+  const innerEl = document.getElementById('ba1-inner');
+  afterEl.style.backgroundImage = 'url("' + GUTTER_URL + '")';
+  afterEl.style.backgroundSize = '200% 100%';
+  afterEl.style.backgroundPosition = '100% center';
+  innerEl.style.backgroundImage = 'url("' + GUTTER_URL + '")';
+  innerEl.style.backgroundSize = '100% 100%';
+  innerEl.style.backgroundPosition = 'left center';
 
-  /* --- Before/After Sliders --- */
   function makeSlider(wrapId, clipId, divId) {
     const wrap = document.getElementById(wrapId);
     const clip = document.getElementById(clipId);
     const div  = document.getElementById(divId);
     let active = false;
-
     function moveTo(clientX) {
       const r = wrap.getBoundingClientRect();
       let p = (clientX - r.left) / r.width;
@@ -810,27 +374,24 @@
       clip.style.width = (p * 100) + '%';
       div.style.left   = (p * 100) + '%';
     }
-
-    wrap.addEventListener('mousedown',  e => { active = true; moveTo(e.clientX); });
+    wrap.addEventListener('mousedown', e => { active = true; moveTo(e.clientX); });
     wrap.addEventListener('touchstart', e => { active = true; moveTo(e.touches[0].clientX); }, { passive: true });
-    window.addEventListener('mousemove',  e => { if (active) moveTo(e.clientX); });
-    window.addEventListener('touchmove',  e => { if (active) moveTo(e.touches[0].clientX); }, { passive: true });
-    window.addEventListener('mouseup',  () => active = false);
+    window.addEventListener('mousemove', e => { if (active) moveTo(e.clientX); });
+    window.addEventListener('touchmove', e => { if (active) moveTo(e.touches[0].clientX); }, { passive: true });
+    window.addEventListener('mouseup', () => active = false);
     window.addEventListener('touchend', () => active = false);
   }
-
   makeSlider('ba1', 'ba1-clip', 'ba1-div');
-  makeSlider('ba2', 'ba2-clip', 'ba2-div');
 
-  /* --- Smooth scroll --- */
+  const hamburger = document.getElementById('hamburger');
+  const navLinks  = document.getElementById('navLinks');
+  hamburger.addEventListener('click', () => navLinks.classList.toggle('open'));
+  navLinks.querySelectorAll('a').forEach(a => a.addEventListener('click', () => navLinks.classList.remove('open')));
+
   document.querySelectorAll('a[href^="#"]').forEach(a => {
     a.addEventListener('click', e => {
       const target = document.querySelector(a.getAttribute('href'));
-      if (target) {
-        e.preventDefault();
-        const offset = target.getBoundingClientRect().top + window.scrollY - 68;
-        window.scrollTo({ top: offset, behavior: 'smooth' });
-      }
+      if (target) { e.preventDefault(); const offset = target.getBoundingClientRect().top + window.scrollY - 68; window.scrollTo({ top: offset, behavior: 'smooth' }); }
     });
   });
 </script>
