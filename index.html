@@ -124,9 +124,10 @@
 
     /* ===== SERVICES ===== */
     #services { background: var(--light); padding: 88px 48px; }
-    .services-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(210px, 1fr)); gap: 20px; max-width: 1040px; margin: 0 auto; }
+    .services-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(210px, 1fr)); gap: 20px; max-width: 1100px; margin: 0 auto; }
     .service-card { background: #fff; padding: 40px 28px; text-align: center; border-radius: 4px; box-shadow: 0 2px 16px rgba(0,0,0,0.065); transition: transform 0.2s, box-shadow 0.2s; }
     .service-card:hover { transform: translateY(-3px); box-shadow: 0 8px 24px rgba(0,0,0,0.10); }
+    .service-card.featured { border-top: 3px solid var(--blue); }
     .service-icon { font-size: 2.4rem; margin-bottom: 18px; }
     .service-name { font-size: 0.8rem; font-weight: 900; letter-spacing: 1.5px; text-transform: uppercase; margin-bottom: 10px; }
     .service-desc { font-size: 0.875rem; color: #666; font-family: Arial, sans-serif; line-height: 1.6; font-weight: 400; }
@@ -183,16 +184,14 @@
     .service-area-card h4 { font-size: 0.72rem; letter-spacing: 3px; text-transform: uppercase; font-weight: 900; margin-bottom: 18px; color: var(--blue); }
     .service-cities { font-size: 0.85rem; color: #555; font-family: Arial, sans-serif; line-height: 2; font-weight: 400; }
 
-    /* ===== BOOKING ===== */
+    /* ===== CTA BAND ===== */
     .booking-band { background: var(--blue); padding: 88px 48px; text-align: center; color: #fff; }
     .booking-band .section-label { color: rgba(255,255,255,0.65); }
     .booking-title { font-size: clamp(1.7rem, 3.5vw, 2.6rem); font-weight: 900; text-transform: uppercase; margin-bottom: 10px; letter-spacing: -0.5px; }
     .booking-sub { font-family: Arial, sans-serif; font-weight: 400; margin-bottom: 40px; font-size: 0.95rem; opacity: 0.88; }
     .booking-btns { display: flex; gap: 14px; justify-content: center; flex-wrap: wrap; }
-    .btn-book { display: inline-block; background: #fff; color: var(--blue); text-decoration: none; padding: 18px 48px; font-size: 0.85rem; font-weight: 900; letter-spacing: 2px; border-radius: 2px; text-transform: uppercase; transition: all 0.2s; }
-    .btn-book:hover { background: #e8f0fd; }
-    .btn-call-band { display: inline-block; background: transparent; color: #fff; text-decoration: none; padding: 18px 48px; font-size: 0.85rem; font-weight: 900; letter-spacing: 2px; border: 2px solid rgba(255,255,255,0.65); border-radius: 2px; text-transform: uppercase; transition: all 0.2s; }
-    .btn-call-band:hover { background: rgba(255,255,255,0.10); }
+    .btn-call-band { display: inline-block; background: #fff; color: var(--blue); text-decoration: none; padding: 18px 48px; font-size: 0.85rem; font-weight: 900; letter-spacing: 2px; border-radius: 2px; text-transform: uppercase; transition: all 0.2s; }
+    .btn-call-band:hover { background: #e8f0fd; }
 
     /* ===== FOOTER ===== */
     footer { background: var(--darker); color: #888; text-align: center; padding: 40px 48px; font-size: 0.85rem; }
@@ -258,11 +257,16 @@
   <p class="section-label">What We Do</p>
   <h2 class="section-title">Our Services</h2>
   <div class="services-grid">
+    <div class="service-card featured"><div class="service-icon">🏚️</div><div class="service-name">Roof Cleaning</div><div class="service-desc">Professional soft wash roof cleaning that safely removes moss, algae, lichen, and black streaks. Extends roof life and dramatically improves curb appeal.</div></div>
     <div class="service-card"><div class="service-icon">🏠</div><div class="service-name">House Washing</div><div class="service-desc">Full exterior house washing that removes dirt, mold, mildew, and grime. Safe for all siding types including vinyl, wood, and stucco.</div></div>
     <div class="service-card"><div class="service-icon">🚗</div><div class="service-name">Driveway &amp; Concrete</div><div class="service-desc">High-pressure surface cleaning that blasts away oil stains, algae, moss, and years of buildup from driveways, walkways, and concrete pads.</div></div>
     <div class="service-card"><div class="service-icon">🍃</div><div class="service-name">Gutter Cleaning</div><div class="service-desc">Complete gutter cleaning and flush-out to remove debris, leaves, and buildup. We restore proper drainage and protect your home's foundation.</div></div>
-    <div class="service-card"><div class="service-icon">☀️</div><div class="service-name">Solar Panel Cleaning</div><div class="service-desc">Careful solar panel cleaning that removes dust, debris, and buildup to maximize energy output and protect your investment.</div></div>
+    <div class="service-card"><div class="service-icon">🌿</div><div class="service-name">Fence Cleaning</div><div class="service-desc">Restore your fence to like-new condition. We remove mold, mildew, and weathering from wood, vinyl, and chain-link fences.</div></div>
+    <div class="service-card"><div class="service-icon">🅿️</div><div class="service-name">Parking Lots</div><div class="service-desc">Commercial-grade cleaning for parking lots and paved surfaces. Remove oil stains, gum, and debris — keeping your property looking professional.</div></div>
+    <div class="service-card"><div class="service-icon">🎨</div><div class="service-name">Graffiti Removal</div><div class="service-desc">Fast, effective graffiti removal from exterior walls, fences, and surfaces. We restore your property quickly and discreetly.</div></div>
+    <div class="service-card"><div class="service-icon">🚘</div><div class="service-name">Garage Cleaning</div><div class="service-desc">Deep clean your garage floor and walls — removing oil stains, grime, and buildup. Great prep for painting or just a clean, organized space.</div></div>
     <div class="service-card"><div class="service-icon">🪵</div><div class="service-name">Deck &amp; Patio</div><div class="service-desc">Revive your outdoor living spaces with a thorough pressure wash that lifts embedded dirt, moss, and staining from wood, composite, and stone surfaces.</div></div>
+    <div class="service-card"><div class="service-icon">☀️</div><div class="service-name">Solar Panel Cleaning</div><div class="service-desc">Careful solar panel cleaning that removes dust, debris, and buildup to maximize energy output and protect your investment.</div></div>
   </div>
 </section>
 
@@ -326,11 +330,10 @@
 </section>
 
 <div class="booking-band">
-  <p class="section-label">Get Started</p>
+  <p class="section-label">Get In Touch</p>
   <h2 class="booking-title">Ready for a Spotless Exterior?</h2>
-  <p class="booking-sub">Locally owned · Washington State · Opens 9 AM</p>
+  <p class="booking-sub">Locally owned · Washington State · Serving the Greater Seattle Area</p>
   <div class="booking-btns">
-    <a href="#" class="btn-book">Book Now</a>
     <a href="tel:2064953127" class="btn-call-band">Call (206) 495-3127</a>
   </div>
 </div>
@@ -338,7 +341,7 @@
 <footer>
   <div class="footer-logo">Superior <span class="accent">Exterior</span> Cleanings</div>
   <div class="footer-info">
-    <a href="tel:2064953127">(206) 495-3127</a> &nbsp;·&nbsp; Washington State &nbsp;·&nbsp; Opens 9 AM<br>
+    <a href="tel:2064953127">(206) 495-3127</a> &nbsp;·&nbsp; Washington State &nbsp;·&nbsp; Serving Greater Seattle<br>
     <span style="font-size:0.78rem;">© 2025 Superior Exterior Cleanings · All rights reserved</span>
   </div>
 </footer>
@@ -353,8 +356,6 @@
   const afterEl  = document.getElementById('ba1-after');
   const beforeEl = document.getElementById('ba1-before');
   afterEl.style.backgroundImage  = 'url("' + GUTTER_URL + '")';
-  beforeEl.style.backgroundImage = 'url("' + GUTTER_URL + '")';  
-  afterEl.style.backgroundImage = 'url("' + GUTTER_URL + '")';
   afterEl.style.backgroundSize = '200% 100%';
   afterEl.style.backgroundPosition = '100% center';
   beforeEl.style.backgroundImage = 'url("' + GUTTER_URL + '")';
